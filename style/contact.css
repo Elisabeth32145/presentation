@@ -1,0 +1,107 @@
+:root{
+    --bg:#f4f4f4;
+    --black:#09061a;
+    --accent:#cf3b5e;
+    --text:#505050;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Montserrat", sans-serif;
+    background:var(--bg);
+    color:var(--black);
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn{
+    position:fixed;
+    top:30px;
+    left:30px;
+    text-decoration:none;
+    color:var(--black);
+    border-bottom:2px solid var(--accent);
+    padding-bottom:5px;
+    font-size:.9rem;
+    z-index:10;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    color:var(--accent);
+}
+
+/* ================= SECTION CONTACT ================= */
+
+.contact-section{
+    padding:120px 8%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.contact-section h2{
+    font-size:3rem;
+    margin-bottom:60px;
+}
+
+/* ================= GRID ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:40px;
+}
+
+/* ================= CARD ================= */
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+}
+
+.contact-card p{
+    margin-bottom:10px;
+    color:var(--text);
+    line-height:1.6;
+}
+
+.contact-card strong{
+    color:var(--black);
+    font-size:1.1rem;
+}
+
+/* liens mail */
+.contact-card a{
+    color:var(--black);
+    text-decoration:none;
+    border-bottom:1px solid var(--accent);
+    transition:.3s;
+}
+
+.contact-card a:hover{
+    color:var(--accent);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:800px){
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-section h2{
+        font-size:2rem;
+    }
+}
